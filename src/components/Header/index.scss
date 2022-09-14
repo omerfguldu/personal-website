@@ -1,0 +1,21 @@
+.header-container {
+  display: grid;
+  grid-template-columns: 30rem auto auto auto 1fr auto;
+  color: #607b96;
+
+  div {
+    padding: 1rem;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border: 1px solid #1e2d3d;
+    color: #607b96;
+  }
+
+  a.active {
+    border-bottom: 2px solid #fea55f;
+    color: #fff;
+  }
+}

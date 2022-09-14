@@ -1,0 +1,139 @@
+.home-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 30rem;
+  gap: 10rem;
+
+  .info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    .title-text {
+      color: #4d5bce;
+    }
+
+    .bottom-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      .comment-line {
+        color: #607b96;
+      }
+
+      .const {
+        color: #4d5bce;
+      }
+
+      .githubLink {
+        color: #43d9ad;
+      }
+
+      .github {
+        text-decoration: none;
+        color: #e99287;
+      }
+    }
+  }
+
+  .cube-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40rem;
+
+    .cubespinner {
+      animation-name: spincube;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 15s;
+      transform-style: preserve-3d;
+      transform-origin: 100px 100px 0;
+
+      div {
+        position: absolute;
+        width: 40rem;
+        height: 40rem;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        font-size: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px 0px lightyellow;
+      }
+
+      .face1 {
+        transform: translateZ(20rem);
+      }
+
+      .face2 {
+        transform: rotateY(90deg) translateZ(20rem);
+      }
+
+      .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(20rem);
+      }
+
+      .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(20rem);
+      }
+
+      .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(20rem);
+      }
+
+      .face6 {
+        transform: rotateX(-90deg) translateZ(20rem);
+      }
+    }
+  }
+
+  .effect {
+    position: absolute;
+    width: 45rem;
+    height: 49rem;
+    opacity: 0.4;
+    filter: blur(174px);
+  }
+
+  .green-effect {
+    background-color: #43d9ad;
+    transform: rotate(-94.3deg);
+    left: 1014px;
+    top: 168px;
+  }
+
+  .blue-effect {
+    background-color: #4d5bce;
+    transform: rotate(13.51deg);
+    left: 1300px;
+    top: 436px;
+  }
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateZ(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}

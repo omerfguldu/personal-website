@@ -1,0 +1,26 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto;
+  color: #607b96;
+
+  div,
+  a {
+    padding: 1rem 1.3rem;
+    border: 1px solid #1e2d3d;
+  }
+
+  a {
+    text-decoration: none;
+    color: #607b96;
+  }
+
+  & a:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+}

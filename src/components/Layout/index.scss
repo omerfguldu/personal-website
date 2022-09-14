@@ -1,0 +1,12 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #011627;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.page {
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
