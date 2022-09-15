@@ -31,7 +31,6 @@
   }
 
   .readme-tab {
-    color: #4b4604;
     color: #fff;
   }
 }
@@ -42,22 +41,19 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
 
-  .personal-info-col {
+  .about-content-col {
     border: 1px solid #1e2d3d;
     border-top: none;
 
-    .personal-info-tab {
+    .about-content-tab {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 25rem;
       border-right: 1px solid #1e2d3d;
       padding: 0.5rem 1rem;
+      color: #607b96;
     }
-  }
-
-  .empty-div {
-    border-bottom: 1px solid #1e2d3d;
   }
 
   .readme-content-container {
