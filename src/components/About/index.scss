@@ -1,0 +1,121 @@
+.grid-container-about-tab {
+  display: grid;
+  grid-template-columns: 30rem;
+  grid-template-rows: auto auto auto 1fr;
+
+  .tab-title {
+    border: 1px solid #1e2d3d;
+    border-top: none;
+    border-left: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .tab {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid #1e2d3d;
+    border-top: none;
+    border-left: none;
+    padding: 1.2rem;
+    color: #607b96;
+    font-size: 1.6rem;
+  }
+
+  .mail-tab,
+  .phone-tab {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .readme-tab {
+    color: #4b4604;
+    color: #fff;
+  }
+}
+
+.grid-container-about-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+
+  .personal-info-col {
+    border: 1px solid #1e2d3d;
+    border-top: none;
+
+    .personal-info-tab {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 25rem;
+      border-right: 1px solid #1e2d3d;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .empty-div {
+    border-bottom: 1px solid #1e2d3d;
+  }
+
+  .readme-content-container {
+    border: 1px solid #1e2d3d;
+    border-top: none;
+    padding: 3rem 6rem;
+  }
+
+  ol {
+    counter-reset: nodots;
+    list-style-type: none;
+
+    li {
+      display: block;
+
+      &:before {
+        content: counter(nodots) " ";
+        counter-increment: nodots;
+        margin-right: 1rem;
+      }
+
+      .readme-title {
+        color: #378ce6;
+      }
+    }
+  }
+
+  .readme-visual-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 4rem;
+
+    .first-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      .hi-there {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      ul {
+        margin-left: 3rem;
+      }
+    }
+
+    .second-section,
+    .third-section {
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        align-items: center;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
