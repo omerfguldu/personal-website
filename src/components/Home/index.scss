@@ -1,6 +1,8 @@
 .home-container {
   height: 100%;
+  width: 100%;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-around;
   padding: 0 30rem;
@@ -94,7 +96,6 @@
   }
 
   .effect {
-    position: absolute;
     width: 45rem;
     height: 49rem;
     opacity: 0.4;
@@ -102,16 +103,18 @@
   }
 
   .green-effect {
+    position: absolute;
     background-color: #43d9ad;
     transform: rotate(-94.3deg);
-    left: 1014px;
+    right: 300px;
     top: 168px;
   }
 
   .blue-effect {
+    position: absolute;
     background-color: #4d5bce;
     transform: rotate(13.51deg);
-    left: 1300px;
+    right: 100px;
     top: 436px;
   }
 }

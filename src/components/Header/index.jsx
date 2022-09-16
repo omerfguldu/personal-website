@@ -17,7 +17,9 @@ function Header() {
       <NavLink exact="true" className="nav-link projects-link" to="/projects">
         _projects
       </NavLink>
-      <div></div>
+      <div className="slider-container">
+        <p className="sliding-text">THE SITE IS STILL IN PROGRESS...</p>
+      </div>
       <NavLink exact="true" className="nav-link contact-link" to="/contact">
         _contact-me
       </NavLink>

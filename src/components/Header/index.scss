@@ -18,4 +18,27 @@
     border-bottom: 2px solid #fea55f;
     color: #fff;
   }
+
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+    .sliding-text {
+      display: inline-block;
+      position: absolute;
+      right: -35rem;
+      animation-name: slideToLeft;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 12s;
+    }
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(-105rem);
+  }
 }

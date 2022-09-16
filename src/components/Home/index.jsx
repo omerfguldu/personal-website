@@ -21,7 +21,6 @@ function Home() {
           <p className="subheadline title-text">{">"} Front-end developer</p>
         </div>
         <div className="bottom-texts">
-          <p className="comment-line">// complete the game to continue</p>
           <p className="comment-line">
             // you can also see it on my Github page
           </p>
@@ -59,9 +58,9 @@ function Home() {
             <FontAwesomeIcon icon={faGitAlt} color="#ec4d28" />
           </div>
         </div>
+        <div className="effect green-effect"></div>
+        <div className="effect blue-effect"></div>
       </div>
-      <div className="effect green-effect"></div>
-      <div className="effect blue-effect"></div>
     </div>
   );
 }
