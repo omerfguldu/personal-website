@@ -1,8 +1,12 @@
 import "./index.scss";
-import React from "react";
+import Construction from "../Construction";
 
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <div>
+      <Construction />
+    </div>
+  );
 }
 
 export default Projects;
