@@ -22,5 +22,17 @@
 }
 
 .construction-svg svg {
-  width: 60vw;
+  width: 100rem;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1215px) {
+  html {
+    font-size: 40%;
+  }
+
+  .construction-svg svg {
+    width: 80rem;
+    // background-color: red;
+    margin-top: -7rem;
+  }
 }

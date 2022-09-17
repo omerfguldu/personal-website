@@ -35,3 +35,25 @@ textarea {
 .p-300 {
   font-weight: 300;
 }
+
+@media screen and (min-width: 1550px) and (max-width: 1900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 1215px) and (max-width: 1550px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1215px) {
+  html {
+    font-size: 40%;
+  }
+
+  .construction-svg svg {
+    width: 50rem;
+  }
+}

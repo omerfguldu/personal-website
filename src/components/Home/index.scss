@@ -140,3 +140,58 @@
     transform: rotateX(90deg);
   }
 }
+
+@media screen and (min-width: 800px) and (max-width: 1215px) {
+  html {
+    font-size: 40%;
+  }
+
+  .home-container {
+    .cube-container {
+      .cubespinner {
+        div {
+          width: 30rem;
+          height: 30rem;
+          font-size: 20rem;
+        }
+
+        .face1 {
+          transform: translateZ(15rem);
+        }
+
+        .face2 {
+          transform: rotateY(90deg) translateZ(15rem);
+        }
+
+        .face3 {
+          transform: rotateY(90deg) rotateX(90deg) translateZ(15rem);
+        }
+
+        .face4 {
+          transform: rotateY(180deg) rotateZ(90deg) translateZ(15rem);
+        }
+
+        .face5 {
+          transform: rotateY(-90deg) rotateZ(90deg) translateZ(15rem);
+        }
+
+        .face6 {
+          transform: rotateX(-90deg) translateZ(15rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-container {
+    // background-color: red;
+    padding: 0 10rem;
+    .info-container {
+      // background-color: #fff;
+    }
+    .cube-container {
+      display: none;
+    }
+  }
+}

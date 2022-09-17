@@ -58,9 +58,9 @@ function Home() {
             <FontAwesomeIcon icon={faGitAlt} color="#ec4d28" />
           </div>
         </div>
-        <div className="effect green-effect"></div>
-        <div className="effect blue-effect"></div>
       </div>
+      <div className="effect green-effect"></div>
+      <div className="effect blue-effect"></div>
     </div>
   );
 }
