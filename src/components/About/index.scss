@@ -54,6 +54,10 @@
       padding: 0.5rem 1rem;
       color: #607b96;
     }
+
+    .mobile-preview-icons {
+      opacity: 0;
+    }
   }
 
   .readme-content-container {
@@ -112,6 +116,52 @@
         align-items: center;
         margin-top: 2rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid-containers {
+    .grid-container-about-tab {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-container-about-content {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    .preview {
+      display: none;
+    }
+
+    .readme {
+      border-top: 1px solid #1e2d3d;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .about-content-col {
+      .about-content-tab {
+      }
+      .mobile-preview-icons {
+        opacity: 100;
+        padding: 0 3rem;
+        display: flex;
+        gap: 2rem;
+
+        .code-icon {
+          color: #fff;
+        }
+        .file-icon {
+          color: #607b96;
+        }
+      }
+    }
+
+    .readme-visual-content-container {
+      display: none;
     }
   }
 }

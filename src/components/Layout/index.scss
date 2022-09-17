@@ -20,4 +20,10 @@
   .App {
     grid-template-rows: 1fr auto;
   }
+
+  .grid-containers {
+    flex-direction: column;
+    position: absolute;
+    top: 9rem;
+  }
 }

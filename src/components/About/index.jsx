@@ -5,6 +5,8 @@ import {
   faEnvelope,
   faPhone,
   faFileImage,
+  faCode,
+  faFile,
 } from "@fortawesome/free-solid-svg-icons";
 import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
 import "./index.scss";
@@ -40,15 +42,19 @@ function About() {
         </div>
       </div>
       <div className="grid-container-about-content">
-        <div className="about-content-col">
+        <div className="about-content-col readme">
           <div className="about-content-tab">
             <p>
               <FontAwesomeIcon icon={faMarkdown} color={"#4b4604"} /> README.md
             </p>
             <FontAwesomeIcon icon={faXmark} />
           </div>
+          <div className="mobile-preview-icons">
+            <FontAwesomeIcon className="code-icon" icon={faCode} />
+            <FontAwesomeIcon className="file-icon" icon={faFile} />
+          </div>
         </div>
-        <div className="about-content-col">
+        <div className="about-content-col preview">
           <div className="about-content-tab">
             <p>
               <FontAwesomeIcon icon={faFileImage} color={"#fff"} /> Preview
@@ -104,6 +110,11 @@ function About() {
             </li>
             <li>{"<p/>"}</li>
           </ol>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
         <div className="readme-visual-content-container">
           <div className="first-section">
@@ -293,6 +304,11 @@ function About() {
                 />
               </a>
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
         </div>
       </div>
