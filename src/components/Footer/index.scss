@@ -24,3 +24,12 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .footer-container {
+    // background-color: #010c15;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
