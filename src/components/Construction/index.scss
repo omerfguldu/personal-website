@@ -32,7 +32,24 @@
 
   .construction-svg svg {
     width: 80rem;
-    // background-color: red;
     margin-top: -7rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  // html {
+  //   font-size: 40%;
+  // }
+
+  .construction-svg svg {
+    width: 50rem;
+    position: absolute;
+    top: 40px;
+  }
+
+  .construction-svg::before {
+    position: absolute;
+    top: 80px;
+    z-index: 0;
   }
 }

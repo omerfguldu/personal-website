@@ -130,38 +130,111 @@
       display: flex;
       flex-direction: column;
       overflow: auto;
-    }
+      position: relative;
 
-    .preview {
-      display: none;
-    }
-
-    .readme {
-      border-top: 1px solid #1e2d3d;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .about-content-col {
-      .about-content-tab {
+      .code-input {
+        position: absolute;
+        z-index: 99999;
+        top: -8px;
+        right: 60px;
+        width: 3rem;
       }
-      .mobile-preview-icons {
+      .file-input {
+        position: absolute;
+        z-index: 99999;
+        top: -8px;
+        right: 22px;
+        width: 3rem;
+      }
+      .file-input:checked ~ .about-content-col {
+        .mobile-preview-icons {
+          .file-icon {
+            color: #fff;
+          }
+          .code-icon {
+            color: #607b96;
+          }
+        }
+      }
+
+      .code-input:checked ~ .about-content-col {
+        .mobile-preview-icons {
+          .code-icon {
+            color: #fff;
+          }
+          .file-icon {
+            color: #607b96;
+          }
+        }
+      }
+
+      .file-input:checked ~ .readme-content-container,
+      .file-input:checked ~ .readme {
+        display: none !important;
+      }
+
+      .file-input:checked ~ .readme-visual-content-container,
+      .file-input:checked ~ .preview {
+        display: block;
         opacity: 100;
-        padding: 0 3rem;
-        display: flex;
-        gap: 2rem;
+      }
 
-        .code-icon {
-          color: #fff;
-        }
-        .file-icon {
-          color: #607b96;
+      .code-input:checked ~ .readme-content-container,
+      .code-input:checked ~ .readme {
+        display: block;
+      }
+
+      .code-input:checked ~ .readme-visual-content-container,
+      .code-input:checked ~ .preview {
+        display: none !important;
+      }
+
+      .code-input:checked ~ .about-content-col {
+        .mobile-preview-icons {
+          .code-icon {
+            color: #fff;
+          }
+          .file-icon {
+            color: #607b96;
+          }
         }
       }
-    }
 
-    .readme-visual-content-container {
-      display: none;
+      .preview {
+        display: none;
+        opacity: 0;
+        border-top: 1px solid #1e2d3d;
+      }
+
+      .readme {
+        border-top: 1px solid #1e2d3d;
+      }
+      .about-content-col {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        .about-content-tab {
+        }
+        .mobile-preview-icons {
+          opacity: 100;
+          padding: 0 3rem;
+          display: flex;
+          gap: 2rem;
+          position: relative;
+
+          .code-icon {
+            color: #fff;
+          }
+
+          .file-icon {
+            color: #607b96;
+          }
+        }
+      }
+
+      .readme-visual-content-container {
+        display: none;
+      }
     }
   }
 }

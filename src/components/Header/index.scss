@@ -14,7 +14,7 @@ input:checked ~ .header-container {
   .header-title {
     .hamburger-menu {
       .hamburger-top {
-        transform: rotate(45deg) translateX(10px) translateY(9px);
+        transform: rotate(45deg) translateX(1rem) translateY(0.9rem);
       }
     }
   }
@@ -34,7 +34,7 @@ input:checked ~ .header-container {
   .header-title {
     .hamburger-menu {
       .hamburger-bottom {
-        transform: rotate(-45deg) translateX(8px) translateY(-10px);
+        transform: rotate(-45deg) translateX(0.8rem) translateY(-1rem);
       }
     }
   }
@@ -73,8 +73,8 @@ input:checked ~ .header-container {
       .line {
         padding: 0;
         position: absolute;
-        width: 40px;
-        height: 3px;
+        width: 4rem;
+        height: 0.3rem;
         background-color: #fff;
         right: 0;
         // top: 50%;
@@ -82,7 +82,7 @@ input:checked ~ .header-container {
       }
 
       .hamburger-top {
-        top: 7px;
+        top: 0.7rem;
         transition: all 0.4s ease-in-out;
       }
 
@@ -91,7 +91,7 @@ input:checked ~ .header-container {
       }
 
       .hamburger-bottom {
-        bottom: 4px;
+        bottom: 0.4rem;
         transition: all 0.4s ease-in-out;
       }
     }

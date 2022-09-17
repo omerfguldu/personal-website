@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,
@@ -14,6 +15,16 @@ import "./index.scss";
 import { NavLink } from "react-router-dom";
 
 function About() {
+  const codeRef = useRef();
+  const fileRef = useRef();
+
+  const onCodeChange = () => {
+    fileRef.current.checked = false;
+  };
+  const onFileChange = () => {
+    codeRef.current.checked = false;
+  };
+
   return (
     <div className="grid-containers">
       <div className="grid-container-about-tab">
@@ -42,6 +53,18 @@ function About() {
         </div>
       </div>
       <div className="grid-container-about-content">
+        <input
+          type="checkbox"
+          onChange={onCodeChange}
+          className="code-input"
+          ref={codeRef}
+        />
+        <input
+          type="checkbox"
+          onChange={onFileChange}
+          className="file-input"
+          ref={fileRef}
+        />
         <div className="about-content-col readme">
           <div className="about-content-tab">
             <p>
@@ -61,6 +84,10 @@ function About() {
               README.md
             </p>
             <FontAwesomeIcon icon={faXmark} />
+          </div>
+          <div className="mobile-preview-icons">
+            <FontAwesomeIcon className="code-icon" icon={faCode} />
+            <FontAwesomeIcon className="file-icon" icon={faFile} />
           </div>
         </div>
         <div className="readme-content-container">
