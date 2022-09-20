@@ -5,10 +5,11 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import { ProjectsProvider } from "./context/ProjectsContext";
 
 function App() {
   return (
-    <>
+    <ProjectsProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -17,7 +18,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </>
+    </ProjectsProvider>
   );
 }
 

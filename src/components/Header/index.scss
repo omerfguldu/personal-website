@@ -1,4 +1,4 @@
-input {
+.menu-input {
   position: absolute;
   display: inline-block;
   right: 30px;
@@ -10,7 +10,7 @@ input {
   cursor: pointer;
 }
 
-input:checked ~ .header-container {
+.menu-input:checked ~ .header-container {
   .header-title {
     .hamburger-menu {
       .hamburger-top {
@@ -20,7 +20,7 @@ input:checked ~ .header-container {
   }
 }
 
-input:checked ~ .header-container {
+.menu-input:checked ~ .header-container {
   .header-title {
     .hamburger-menu {
       .hamburger-middle {
@@ -30,7 +30,7 @@ input:checked ~ .header-container {
   }
 }
 
-input:checked ~ .header-container {
+.menu-input:checked ~ .header-container {
   .header-title {
     .hamburger-menu {
       .hamburger-bottom {
@@ -40,13 +40,13 @@ input:checked ~ .header-container {
   }
 }
 
-input:checked ~ .header-container {
+.menu-input:checked ~ .header-container {
   .nav-link {
     opacity: 100;
   }
 }
 
-input:checked ~ .header-container {
+.menu-input:checked ~ .header-container {
   z-index: 1;
 }
 
@@ -113,24 +113,30 @@ input:checked ~ .header-container {
     overflow: hidden;
     position: relative;
     .sliding-text {
-      display: inline-block;
+      // display: inline-block;
       position: absolute;
-      right: -35rem;
+      right: -270px;
       animation-name: slideToLeft;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 12s;
+      animation-duration: 10s;
     }
   }
 }
 
 @keyframes slideToLeft {
-  0% {
-    transform: translateX(0rem);
+  from {
+    right: -270px;
   }
-  100% {
-    transform: translateX(-105rem);
+  to {
+    right: 100%;
   }
+  // 0% {
+  //   transform: translateX(0rem);
+  // }
+  // 100% {
+  //   transform: translateX(-105rem);
+  // }
 }
 
 @media screen and (max-width: 800px) {

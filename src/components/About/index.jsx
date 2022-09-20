@@ -56,13 +56,13 @@ function About() {
         <input
           type="checkbox"
           onChange={onCodeChange}
-          className="code-input"
+          className="readme-input code-input"
           ref={codeRef}
         />
         <input
           type="checkbox"
           onChange={onFileChange}
-          className="file-input"
+          className="readme-input file-input"
           ref={fileRef}
         />
         <div className="about-content-col readme">

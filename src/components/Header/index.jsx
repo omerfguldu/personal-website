@@ -13,7 +13,7 @@ function Header() {
   };
   return (
     <>
-      <input type="checkbox" ref={inputRef} />
+      <input className="menu-input" type="checkbox" ref={inputRef} />
       <div className="header-container">
         <div className="header-title">
           <p>omer-faruk-guldu</p>

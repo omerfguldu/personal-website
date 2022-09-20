@@ -41,6 +41,18 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
 
+  .readme-input {
+    position: absolute;
+    display: inline-block;
+    right: 30px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
   .about-content-col {
     border: 1px solid #1e2d3d;
     border-top: none;
@@ -57,6 +69,7 @@
 
     .mobile-preview-icons {
       opacity: 0;
+      display: none;
     }
   }
 
