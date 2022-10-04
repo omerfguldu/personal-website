@@ -137,11 +137,6 @@ function About() {
             </li>
             <li>{"<p/>"}</li>
           </ol>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </div>
         <div className="readme-visual-content-container">
           <div className="first-section">
@@ -331,11 +326,6 @@ function About() {
                 />
               </a>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </div>
       </div>

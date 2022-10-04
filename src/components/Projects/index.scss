@@ -101,13 +101,12 @@
     }
 
     .projects-container {
-      // height: 92vh;
       flex: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 5rem;
-      padding: 15rem 20rem;
-      overflow: scroll;
+      padding: 5rem 10rem;
+      overflow-x: hidden;
 
       .project-card {
         display: flex;
