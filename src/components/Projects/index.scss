@@ -101,18 +101,19 @@
     }
 
     .projects-container {
-      flex: 1;
+      // height: 100%;
       display: flex;
       flex-wrap: wrap;
       gap: 5rem;
       padding: 5rem 10rem;
       overflow-x: hidden;
+      border-bottom: none;
 
       .project-card {
         display: flex;
         flex-direction: column;
-        width: 40rem;
-        height: 35rem;
+        width: 400px;
+        height: 350px;
         background-color: #011221;
         border: 1px solid #1e2d3d;
         border-radius: 15px;
@@ -144,6 +145,38 @@
             text-decoration: none;
             border-radius: 8px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects-section {
+    flex-direction: column;
+    position: absolute;
+    top: 9rem;
+    overflow: scroll;
+
+    .left-side {
+      width: 100%;
+
+      .categories {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 2rem 2rem;
+        flex-wrap: wrap;
+
+        .checkbox-container {
+          gap: 1.5rem;
+        }
+      }
+    }
+
+    .right-side {
+      .projects-container {
+        .project-card:last-child {
+          margin-bottom: 15rem;
         }
       }
     }

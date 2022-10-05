@@ -55,15 +55,14 @@ function Projects() {
           <p>React, Vue</p>
         </div>
         <div className="projects-container">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {myProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              imgSrc={project.projectPicture}
+              projectName={project.projectName}
+              projectLinks={project.projectLinks}
+            />
+          ))}
         </div>
       </div>
     </div>

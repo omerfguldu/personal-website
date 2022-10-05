@@ -76,6 +76,7 @@
   .readme-content-container {
     border: 1px solid #1e2d3d;
     border-top: none;
+    border-bottom: none;
     padding: 3rem 6rem;
   }
 
@@ -142,8 +143,8 @@
     .grid-container-about-content {
       display: flex;
       flex-direction: column;
-      overflow: auto;
       position: relative;
+      overflow: scroll;
 
       .code-input {
         position: absolute;
@@ -224,6 +225,8 @@
       }
       .about-content-col {
         display: flex !important;
+        border-left: none;
+        border-right: none;
         align-items: center;
         justify-content: space-between;
         .about-content-tab {
@@ -243,6 +246,14 @@
             color: #607b96;
           }
         }
+      }
+
+      .readme-content-container,
+      .readme-visual-content-container {
+        margin-bottom: 15rem;
+        border-left: none;
+        border-right: none;
+        overflow: scroll;
       }
 
       .readme-visual-content-container {
