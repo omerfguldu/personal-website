@@ -1,0 +1,28 @@
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .project-card-header {
+    font-size: 1.6rem;
+    color: #5565e8;
+
+    span {
+      color: #607b96;
+    }
+  }
+
+  .project-card {
+    .project-details {
+      .project-desc-text {
+        color: #607b96;
+      }
+
+      .project-links {
+        font-size: 1.4rem;
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
+  }
+}

@@ -163,6 +163,8 @@
       padding: 2rem 3rem;
       text-align: center;
       transition: opacity 0.4s ease-in-out;
+      border-left: none;
+      border-right: none;
     }
 
     a.active {

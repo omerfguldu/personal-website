@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
-  faVuejs,
+  faAngular,
   faHtml5,
   faJs,
   faCss3,
@@ -48,6 +48,13 @@ function Projects() {
               <p>React</p>
             </div>
           </div>
+          <div className="checkbox-container">
+            <input className="category-input " type="checkbox" />
+            <div className="category-name">
+              <FontAwesomeIcon className="tech-icon" icon={faAngular} />
+              <p>Angular</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="right-side">
@@ -58,9 +65,11 @@ function Projects() {
           {myProjects.map((project, index) => (
             <ProjectCard
               key={index}
+              projectNumber={index}
               imgSrc={project.projectPicture}
               projectName={project.projectName}
               projectLinks={project.projectLinks}
+              projectDesc={project.projectDescription}
             />
           ))}
         </div>
