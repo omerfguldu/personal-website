@@ -1,0 +1,30 @@
+.contact-content-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+
+  .contact-content-header {
+    display: flex;
+    border-bottom: 1px solid #1e2d3d;
+
+    .contacts-tab {
+      display: flex;
+      width: 20rem;
+      align-items: center;
+      justify-content: space-between;
+      border-right: 1px solid #1e2d3d;
+
+      padding: 0.5rem 1rem;
+    }
+
+    .rest-of-tab {
+      flex: 1;
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    flex: 1;
+  }
+}

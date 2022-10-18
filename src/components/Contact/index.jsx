@@ -1,12 +1,14 @@
 import "./index.scss";
-import Construction from "../Construction";
 
 import React from "react";
+import ContactMenu from "./ContactMenu";
+import ContactContent from "./ContactContent";
 
 function Contact() {
   return (
     <div className="contact-container">
-      <Construction />
+      <ContactMenu />
+      <ContactContent />
     </div>
   );
 }

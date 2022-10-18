@@ -1,0 +1,32 @@
+.contact-menu-container {
+  display: flex;
+  width: 30rem;
+  flex-direction: column;
+  border-right: 1px solid #1e2d3d;
+
+  .tab-title {
+    display: flex;
+    border-bottom: 1px solid #1e2d3d;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contact {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: none;
+    padding: 1.2rem;
+    color: #607b96;
+    font-size: 1.6rem;
+  }
+
+  .phone-container {
+    border-bottom: 1px solid #1e2d3d;
+  }
+
+  .other-contacts-container {
+    flex: 1;
+  }
+}

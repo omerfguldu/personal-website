@@ -6,6 +6,7 @@ import {
   faJs,
   faCss3,
 } from "@fortawesome/free-brands-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import { useProjects } from "../../context/ProjectsContext";
 import { projects } from "../../context/projects";
@@ -60,6 +61,7 @@ function Projects() {
       <div className="right-side">
         <div className="right-side-title">
           <p>React, Vue</p>
+          <FontAwesomeIcon className="close-icon" icon={faXmark} />
         </div>
         <div className="projects-container">
           {myProjects.map((project, index) => (
