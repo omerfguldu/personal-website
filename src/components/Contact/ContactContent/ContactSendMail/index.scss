@@ -48,8 +48,14 @@
     padding: 20px;
   }
 
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border: 3px solid #2e4053;
+  }
+
   .flat-button {
-    background-color: transparent;
+    background-color: #1c2b3a;
     color: #fff;
     letter-spacing: 1px;
     padding: 1.5rem;

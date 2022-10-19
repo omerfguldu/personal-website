@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import ContactSendMail from "./ContactSendMail";
 import ContactShowMail from "./ContactShowMail";
+import { MailContentProvider } from "../../../context/MailContentContext";
 
 function ContactContent() {
   return (
@@ -18,8 +19,10 @@ function ContactContent() {
         <div className="rest-of-tab"></div>
       </div>
       <div className="contact-content">
-        <ContactSendMail />
-        <ContactShowMail />
+        <MailContentProvider>
+          <ContactSendMail />
+          <ContactShowMail />
+        </MailContentProvider>
       </div>
     </div>
   );

@@ -1,3 +1,41 @@
 .show-mail-container {
   flex: 1;
+
+  .show-mail-list {
+    counter-reset: nodots;
+    list-style-type: none;
+    padding: 10rem;
+    font-size: 1.6rem;
+
+    li {
+      display: block;
+      color: #607b96;
+
+      &:before {
+        content: counter(nodots) " ";
+        counter-increment: nodots;
+        margin-right: 1rem;
+      }
+
+      &.mr:before {
+        margin-right: 2rem;
+      }
+
+      .readme-title {
+        color: #378ce6;
+      }
+    }
+  }
+}
+
+.colorVarType {
+  color: #c98bdf;
+}
+
+.colorVarName {
+  color: #5565e8;
+}
+
+.colorVarValue {
+  color: #fea55f;
 }
