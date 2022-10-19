@@ -105,7 +105,7 @@ function ContactSendMail() {
           <li>
             <input
               type="submit"
-              className="flat-button"
+              className="flat-button primary-button"
               value="submit-message"
             />
           </li>

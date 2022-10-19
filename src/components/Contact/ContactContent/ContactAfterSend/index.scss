@@ -1,0 +1,30 @@
+.after-send-container {
+  flex: 1;
+  border-right: 1px solid #1e2d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10rem;
+    gap: 2rem;
+
+    .main-text {
+      font-size: 3rem;
+    }
+
+    .info-text {
+      color: #607b96;
+      text-align: center;
+    }
+
+    .btn-new-message {
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+    }
+  }
+}

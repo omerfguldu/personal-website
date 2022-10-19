@@ -26,14 +26,14 @@ function ProjectCard({
           <div className="project-links">
             <a
               target="_blank"
-              className="project-link"
+              className="project-link primary-button"
               href={projectLinks.githubLink}
             >
               github-link
             </a>
             <a
               target="_blank"
-              className="project-link"
+              className="project-link primary-button"
               href={projectLinks.liveLink}
             >
               live-link

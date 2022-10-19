@@ -36,6 +36,19 @@ textarea {
   font-weight: 300;
 }
 
+.primary-button {
+  background-color: #1c2b3a;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: #5565e8;
+  }
+}
+
 @media screen and (min-width: 1550px) and (max-width: 1900px) {
   html {
     font-size: 50%;
