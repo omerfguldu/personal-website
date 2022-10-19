@@ -1,13 +1,16 @@
 import "./index.scss";
 import emailjs from "@emailjs/browser";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useMailContent } from "../../../../context/MailContentContext";
 
 function ContactSendMail() {
   const form = useRef();
-  const { setMailContent, mailContent } = useMailContent();
-
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const messageInput = useRef();
+  const { setMailContent, mailContent, setIsEmailSent } = useMailContent();
+  const [isEmailSuccess, setIsEmailSuccess] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,6 +24,15 @@ function ContactSendMail() {
       .then(
         (result) => {
           alert(result.text);
+          setMailContent({
+            name: "",
+            email: "",
+            message: "",
+          });
+          nameInput.current.value = "";
+          emailInput.current.value = "";
+          messageInput.current.value = "";
+          setIsEmailSent(true);
         },
         (error) => {
           alert(error.text);
@@ -66,6 +78,7 @@ function ContactSendMail() {
               placeholder="Name"
               required
               onChange={(e, type = "name") => handleChange(e, type)}
+              ref={nameInput}
             />
           </li>
           <li className="">
@@ -76,6 +89,7 @@ function ContactSendMail() {
               placeholder="Email"
               required
               onChange={(e, type = "email") => handleChange(e, type)}
+              ref={emailInput}
             />
           </li>
           <li>
@@ -85,6 +99,7 @@ function ContactSendMail() {
               required
               placeholder="Message"
               onChange={(e, type = "message") => handleChange(e, type)}
+              ref={messageInput}
             ></textarea>
           </li>
           <li>

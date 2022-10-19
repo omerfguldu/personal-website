@@ -6,9 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import ContactSendMail from "./ContactSendMail";
 import ContactShowMail from "./ContactShowMail";
-import { MailContentProvider } from "../../../context/MailContentContext";
+
+import { useMailContent } from "../../../context/MailContentContext";
+import ContactAfterSend from "./ContactAfterSend";
 
 function ContactContent() {
+  const { isEmailSent } = useMailContent();
   return (
     <div className="contact-content-container">
       <div className="contact-content-header">
@@ -19,10 +22,8 @@ function ContactContent() {
         <div className="rest-of-tab"></div>
       </div>
       <div className="contact-content">
-        <MailContentProvider>
-          <ContactSendMail />
-          <ContactShowMail />
-        </MailContentProvider>
+        {!isEmailSent ? <ContactSendMail /> : <ContactAfterSend />}
+        <ContactShowMail />
       </div>
     </div>
   );

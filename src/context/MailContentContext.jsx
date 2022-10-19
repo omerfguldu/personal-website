@@ -8,10 +8,13 @@ export const MailContentProvider = ({ children }) => {
     email: "",
     message: "",
   });
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
   const values = {
     mailContent,
     setMailContent,
+    isEmailSent,
+    setIsEmailSent,
   };
 
   return (
