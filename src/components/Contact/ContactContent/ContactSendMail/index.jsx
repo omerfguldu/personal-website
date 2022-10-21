@@ -9,8 +9,7 @@ function ContactSendMail() {
   const nameInput = useRef();
   const emailInput = useRef();
   const messageInput = useRef();
-  const { setMailContent, mailContent, setIsEmailSent } = useMailContent();
-  const [isEmailSuccess, setIsEmailSuccess] = useState(false);
+  const { setMailContent, setIsEmailSent } = useMailContent();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -40,30 +39,8 @@ function ContactSendMail() {
       );
   };
 
-  const handleChange = (e, type) => {
-    switch (type) {
-      case "email":
-        setMailContent({
-          name: mailContent.name,
-          email: e.target.value,
-          message: mailContent.message,
-        });
-        break;
-      case "message":
-        setMailContent({
-          name: mailContent.name,
-          email: mailContent.email,
-          message: e.target.value,
-        });
-        break;
-      default:
-        setMailContent({
-          name: e.target.value,
-          email: mailContent.email,
-          message: mailContent.message,
-        });
-        break;
-    }
+  const handleChange = (e) => {
+    setMailContent((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -77,7 +54,7 @@ function ContactSendMail() {
               name="name"
               placeholder="Name"
               required
-              onChange={(e, type = "name") => handleChange(e, type)}
+              onChange={handleChange}
               ref={nameInput}
             />
           </li>
@@ -88,7 +65,7 @@ function ContactSendMail() {
               name="email"
               placeholder="Email"
               required
-              onChange={(e, type = "email") => handleChange(e, type)}
+              onChange={handleChange}
               ref={emailInput}
             />
           </li>
@@ -98,7 +75,7 @@ function ContactSendMail() {
               name="message"
               required
               placeholder="Message"
-              onChange={(e, type = "message") => handleChange(e, type)}
+              onChange={handleChange}
               ref={messageInput}
             ></textarea>
           </li>

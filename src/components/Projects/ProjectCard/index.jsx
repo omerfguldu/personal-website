@@ -1,14 +1,16 @@
 import "./index.scss";
 import React from "react";
-import img from "../../../assets/apptodoist.jpeg";
+import todoImg from "../../../assets/apptodoist.jpeg";
+import restavoImg from "../../../assets/restavo.jpg";
 
 function ProjectCard({
-  imgSrc,
+  index,
   projectName,
   projectLinks,
   projectNumber,
   projectDesc,
 }) {
+  const projectImages = [todoImg, restavoImg];
   return (
     <div className="project-card-container">
       <div className="project-card-header">
@@ -18,8 +20,7 @@ function ProjectCard({
       </div>
       <div className="project-card">
         <div className="project-image">
-          {/* <img src={`../../${imgSrc}`} alt="" /> */}
-          <img src={img} alt="" />
+          <img src={projectImages[index]} alt="" />
         </div>
         <div className="project-details">
           <p className="project-desc-text">{projectDesc}</p>

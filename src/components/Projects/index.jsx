@@ -68,7 +68,7 @@ function Projects() {
             <ProjectCard
               key={index}
               projectNumber={index}
-              imgSrc={project.projectPicture}
+              index={index}
               projectName={project.projectName}
               projectLinks={project.projectLinks}
               projectDesc={project.projectDescription}
