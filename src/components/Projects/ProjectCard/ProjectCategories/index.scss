@@ -1,0 +1,31 @@
+.project-categories-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  .category-icon {
+    padding: 0.3rem;
+    border-radius: 2px;
+    width: 1.5rem;
+  }
+
+  .react-icon {
+    color: #86e1f9;
+    background-color: #000;
+  }
+  .angular-icon {
+    background-color: #cf0a0a;
+  }
+  .javascript-icon {
+    color: #000;
+    background-color: #ffe61b;
+  }
+  .html-icon {
+    background-color: #e26a2c;
+  }
+  .css-icon {
+    background-color: #1363df;
+  }
+}
